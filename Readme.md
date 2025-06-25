@@ -15,6 +15,9 @@ A simple full-stack application to collect and display user feedback using React
 
 ##  How to Run the Project
 
+## setup the .env in the backend folder
+ - add your MONGO_URI here
+
 ### 1️⃣ Start the Backend
 
 
