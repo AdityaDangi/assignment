@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./FeedbackForm.css"; // Import the CSS file
+import "./FeedbackForm.css"; 
 
 function FeedbackForm() {
   const [formData, setFormData] = useState({
