@@ -2,29 +2,20 @@ const express = require("express");
 const router = express.Router();
 const Feedback = require("../models/Feedback");
 
-// POST: Submit feedback
-// router.post("/", async (req, res) => {
-//   try {
-//     const newFeedback = new Feedback(req.body);
-//     await newFeedback.save();
-//     res.status(201).json({ message: "Thanks for your feedback!" });
-//   } catch (err) {
-//     res.status(500).json({ error: "Something went wrong." });
-//   }
-// });
+
 
 router.post("/", async (req, res) => {
   console.log("post api");
   try {
-    console.log("Received data:", req.body);  // 👈 Add this
+    console.log("Received data:", req.body);  
     const newFeedback = new Feedback(req.body);
     await newFeedback.save();
     res.status(201).json({ message: "Thanks for your feedback!" });
   } catch (err) {
-    console.error("Error saving feedback:", err);  // 👈 Add this
+    console.error("Error saving feedback:", err); 
     res.status(500).json({ error: "Something went wrong." });
   }
-});// GET: Get all feedback
+});
 router.get("/", async (req, res) => {
   try {
     const { category, sortBy } = req.query;
