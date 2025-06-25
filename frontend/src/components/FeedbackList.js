@@ -6,16 +6,7 @@ function FeedbackList() {
   const [category, setCategory] = useState("");
   const [sortBy, setSortBy] = useState("");
 
-  // const fetchFeedback = useCallback(async () => {
-  //   const res = await axios.get("http://localhost:5000/feedback", {
-  //     params: { category, sortBy },
-  //   });
-  //   setFeedbacks(res.data);
-  // }, [category, sortBy]);
-
-  // useEffect(() => {
-  //   fetchFeedback();
-  // }, [fetchFeedback]);
+  
 const fetchFeedback = useCallback(async () => {
   try {
     const res = await axios.get("http://localhost:5000/feedback", {
